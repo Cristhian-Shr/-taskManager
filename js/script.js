@@ -1,5 +1,4 @@
-import { userLogin } from "../js/hooks.js";
-
+import { userLogin } from "./hooks.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector("form");
@@ -12,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (email && password) {
           const response = await userLogin( email, password );
           if(response.code === 200) {
-            window.location.href = './home/index.html'
+            window.location.href = './pages/home/index.html'
           }
             console.log("Login efetuado com sucesso:", { email, password });
         } else {

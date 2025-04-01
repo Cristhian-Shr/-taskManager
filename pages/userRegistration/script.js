@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (nome && senha) {
             try {
                 await registerUser({ nome, senha });
-                window.location.href = '../index.html';
+                window.location.href = '../../index.html';
             } catch (error) {
                 console.error("Erro ao cadastrar:", error);
             }
