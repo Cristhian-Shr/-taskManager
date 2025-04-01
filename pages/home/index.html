@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Tarefa</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-900 text-white">
+    <nav class="bg-gray-800 shadow">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold">Criar Tarefa</h1>
+            <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+                <a href="../index.html"> Logout</a>
+            </button>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-4 py-6">
+        <form class="bg-gray-800 rounded-lg shadow-md p-6 text-white" id="form">
+            <div class="mb-4">
+                <label class="block text-sm font-medium py-2" for="taskTitle">Tarefa</label>
+                <input type="text" id="taskTitle"
+                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-sky-500 focus:border-sky-500 bg-gray-900 border-none py-2 px-2"
+                    placeholder="Digite a tarefa" required />
+            </div>
+
+            <div class="flex justify-end">
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+                    id="buttonSubmit">
+                    Criar Tarefa
+                </button>
+            </div>
+        </form>
+
+        <div class="mt-6 bg-gray-800 rounded-lg shadow-md p-6">
+            <h2 class="text-lg font-bold mb-4">Tarefas Criadas</h2>
+            <ul id="taskList" class="pl-5"></ul>
+        </div>
+    </div>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="./script.js"></script>
+
+</body>
+
+</html>
